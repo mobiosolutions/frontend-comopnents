@@ -1,0 +1,48 @@
+@mixin carousel-height($min-height, $height) {
+    min-height: $min-height;
+    height: $height;
+}
+
+// Carousel full screen slider desktop css
+.carousel {
+    @include carousel-height(100vh, 100vh);
+    .carousel-inner{
+        @include carousel-height(100vh, 100vh);
+        .carousel-caption{
+            bottom: 30px;
+        }
+        .carousel-item img {
+            object-fit:cover;
+            @include carousel-height(100vh, 100vh);
+        }
+    }
+    .carousel-indicators{
+        margin-bottom: 1rem;
+    }
+}
+
+// Carousel full screen slider responsive css
+$ipad-max1024: "only screen and (max-width:1024px)";
+$mobile-max667: "only screen and (max-width:667px)";
+@media #{$ipad-max1024} {
+    .carousel {
+        @include carousel-height(500px, 500px);
+        .carousel-inner{
+            @include carousel-height(500px, 500px);
+            .carousel-item img {
+                @include carousel-height(500px, 500px);
+            }
+        }
+    }
+}
+@media #{$mobile-max667} {
+    .carousel {
+        @include carousel-height(300px, 300px);
+        .carousel-inner{
+            @include carousel-height(300px, 300px);   
+            .carousel-item img {
+                @include carousel-height(300px, 300px);
+            }
+        }
+    }
+}
