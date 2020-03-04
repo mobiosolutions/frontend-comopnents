@@ -3,46 +3,46 @@
     height: $height;
 }
 
+// Carousel full screen slider responsive css
+@mixin ipad-max1024 {
+    @media (max-width:1024px) { @content; }
+}
+@mixin mobile-max667 {
+    @media (max-width:667px) { @content; }
+}
+
 // Carousel full screen slider desktop css
 .carousel {
     @include carousel-height(100vh, 100vh);
+    @include ipad-max1024 {
+        @include carousel-height(500px, 500px);
+    }
+    @include mobile-max667 {
+        @include carousel-height(300px, 300px);
+    }
     .carousel-inner{
         @include carousel-height(100vh, 100vh);
+        @include ipad-max1024 {
+            @include carousel-height(500px, 500px);
+        }
+        @include mobile-max667 {
+            @include carousel-height(300px, 300px);
+        }
         .carousel-caption{
             bottom: 30px;
         }
         .carousel-item img {
             object-fit:cover;
             @include carousel-height(100vh, 100vh);
+            @include ipad-max1024 {
+                @include carousel-height(500px, 500px);
+            }
+            @include mobile-max667 {
+                @include carousel-height(300px, 300px);
+            }
         }
     }
     .carousel-indicators{
         margin-bottom: 1rem;
-    }
-}
-
-// Carousel full screen slider responsive css
-$ipad-max1024: "only screen and (max-width:1024px)";
-$mobile-max667: "only screen and (max-width:667px)";
-@media #{$ipad-max1024} {
-    .carousel {
-        @include carousel-height(500px, 500px);
-        .carousel-inner{
-            @include carousel-height(500px, 500px);
-            .carousel-item img {
-                @include carousel-height(500px, 500px);
-            }
-        }
-    }
-}
-@media #{$mobile-max667} {
-    .carousel {
-        @include carousel-height(300px, 300px);
-        .carousel-inner{
-            @include carousel-height(300px, 300px);   
-            .carousel-item img {
-                @include carousel-height(300px, 300px);
-            }
-        }
     }
 }
