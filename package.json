@@ -11,7 +11,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss scss/main.scss public/css/styles.css",
+    "build-css": "node-sass --include-path scss assets/css/main.scss assets/css/styles.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "author": "",
