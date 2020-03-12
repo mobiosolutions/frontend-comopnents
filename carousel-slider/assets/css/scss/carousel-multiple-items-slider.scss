@@ -1,0 +1,268 @@
+@mixin desktop-min991{
+	@media only screen and (min-width:991px) { @content; }
+}
+@mixin tablet-min768{
+	@media only screen and (min-width:768px) { @content; }
+}
+@mixin tablet-min576{
+	@media only screen and (min-width:576px) { @content; }
+} 
+
+$translation-0:translate3d(0, 0, 0);
+$translation-plus100:translate3d(100%, 0, 0);
+$translation-minus100:translate3d(-100%, 0, 0);
+@mixin multiple-item-translation($translation) {
+    position: relative;
+    transform: $translation;
+    visibility: visible;
+}
+
+.carousel-item {
+    @include tablet-min576{
+        margin-right: 0;
+    }   
+}
+.carousel-inner{
+    .carousel-item-next{
+        @include tablet-min576{
+            position: relative;
+            transform: translate3d(0, 0, 0);
+        }
+        @include tablet-min768{
+            position: relative;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    .active {
+        + {
+            .carousel-item {
+                @include tablet-min576{
+                    display: block;
+                }
+                + {
+                    .carousel-item {
+                        @include tablet-min768{
+                            display: block;
+                        }
+                        + {
+                            @include desktop-min991{
+                                .carousel-item {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .carousel-item.active {
+        &:not(.carousel-item-right) {
+            &:not(.carousel-item-left) {
+                @include tablet-min576{
+                    transition: none;
+                }
+                + {
+                    .carousel-item {
+                        @include tablet-min576{    
+                            transition: none;
+                        }
+                        + {
+                            .carousel-item {
+                                @include tablet-min768{   
+                                    transition: none;
+                                }
+                                + {
+                                    .carousel-item {
+                                        @include desktop-min991{   
+                                            transition: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .carousel-item-prev.carousel-item-right {
+        @include tablet-min576{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            display: block;
+            visibility: visible;
+        }
+    }
+   .carousel-item-next {
+        @include tablet-min768{
+			position: relative;
+			transform: translate3d(0, 0, 0);
+		}
+    }
+    @include desktop-min991{
+		.active.col-lg-3.carousel-item {
+			+ {
+				.carousel-item {
+					+ {
+						.carousel-item {
+							+ {
+								.carousel-item {
+									+ {
+										.carousel-item {
+											position: absolute;
+											top: 0;
+											right: -25%;
+											z-index: -1;
+											display: block;
+											visibility: visible;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+    }
+}
+.active.carousel-item-left {
+    + {
+        .carousel-item-next.carousel-item-left {
+            @include tablet-min576{
+                @include multiple-item-translation($translation-minus100);
+            }
+        }
+    }
+}
+.carousel-item-next.carousel-item-left {
+    + {
+        .carousel-item {
+            @include tablet-min576{
+                @include multiple-item-translation($translation-minus100);
+            }
+            + {
+                .carousel-item {
+                    @include tablet-min576{
+                        @include multiple-item-translation($translation-minus100);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.active.carousel-item-right {
+    + {
+        .carousel-item-prev.carousel-item-right {
+            @include tablet-min576{
+                @include multiple-item-translation($translation-plus100);
+                display: block;                
+            }
+        }
+    }
+}
+.carousel-item-prev.carousel-item-right {
+    + {
+        .carousel-item {
+            @include tablet-min576{
+                @include multiple-item-translation($translation-plus100);
+                display: block;                
+            }
+            + {
+                .carousel-item {
+                    @include tablet-min576{
+                        @include multiple-item-translation($translation-plus100);
+                        display: block;                        
+                    }
+                    + {
+                        .carousel-item {
+                            @include tablet-min768{
+                                @include multiple-item-translation($translation-plus100);
+                                display: block;                                
+                            }
+                            + {
+                                .carousel-item {
+                                    @include desktop-min991{
+                                        @include multiple-item-translation($translation-plus100);
+                                        display: block;                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.carousel-item-next.carousel-item-left {
+    + {
+        .carousel-item {
+            @include tablet-min576{
+                @include multiple-item-translation($translation-minus100);
+            }
+            + {
+                .carousel-item {
+                    @include tablet-min576 {
+                        @include multiple-item-translation($translation-minus100);
+                    }
+                    + {
+                        .carousel-item {
+                            @include tablet-min768{
+                                @include multiple-item-translation($translation-minus100);
+                            }	
+                            + {
+                                .carousel-item {
+                                    @include desktop-min991 {
+                                        @include multiple-item-translation($translation-minus100);
+                                    }
+                                }
+                            }							
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.carousel-item-prev{
+    .carousel-item-right {
+        + {
+			.carousel-item {
+                @include tablet-min576{
+                    @include multiple-item-translation($translation-plus100);
+                    display: block;                    
+                }
+                + {
+					.carousel-item {
+                        @include tablet-min576{
+                            @include multiple-item-translation($translation-plus100);
+                            display: block;                            
+                        }
+                        + {
+							.carousel-item {
+                                @include tablet-min768{
+                                    @include multiple-item-translation($translation-plus100);
+                                    display: block;                                    
+                                }
+                                + {
+									.carousel-item {
+                                        @include desktop-min991{
+                                            @include multiple-item-translation($translation-plus100);
+                                            display: block;                                            
+                                        }
+									}
+								}
+							}
+						}
+					}
+				}
+            }
+        }
+    }
+}
