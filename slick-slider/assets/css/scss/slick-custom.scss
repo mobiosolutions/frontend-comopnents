@@ -1,0 +1,50 @@
+// Variables declaration
+$black: #000 !default;
+
+// Slick slider responsive css
+@mixin tablet-max768{
+	@media only screen and (max-width:768px) { @content; }
+}
+
+// Slick slider comman css
+.slider { 
+    width: 50%; 
+    margin: 100px auto;
+    @include tablet-max768(){
+        width: 100%;
+    }
+}
+.slick-slide { 
+    margin: 0px 20px; 
+}
+.slick-slide img { 
+    width: 100%; 
+}
+.slick-slide { 
+    transition: all ease-in-out .3s; 
+    opacity: .2; 
+}
+.slick-active { 
+    opacity: .5; 
+}
+.slick-current { 
+    opacity: 1; 
+}
+.slick-prev{
+    z-index: 1;
+    &:before {
+		color: $black;
+	}
+    @include tablet-max768(){
+        left: -5px;
+    }
+}
+.slick-next{
+    z-index: 1;
+    &:before {
+		color: $black;
+	}
+    @include tablet-max768(){
+        right: -5px;
+    }
+}
