@@ -7160,6 +7160,9 @@ body {
     .card .card-details p {
       font-size: 16px;
       margin-bottom: 0; }
+      @media (max-width: 767px) {
+        .card .card-details p {
+          font-size: 14px; } }
     .card .card-details h4 a {
       text-align: left;
       font-size: 22px;
@@ -7174,6 +7177,14 @@ body {
       .card .card-details h4 a:hover {
         color: #575757;
         text-decoration: none; }
+      @media (max-width: 767px) {
+        .card .card-details h4 a {
+          font-size: 18px; } }
+    .card .card-details .category {
+      font-size: 16px; }
+      @media (max-width: 767px) {
+        .card .card-details .category {
+          font-size: 14px; } }
     .card .card-details .btn-card {
       padding: 10px 30px;
       background: rgba(164, 88, 162, 0.11);
@@ -7207,6 +7218,11 @@ body {
         -moz-transition: 0.3s ease-in-out all;
         -ms-transition: 0.3s ease-in-out all;
         z-index: -1; }
+      @media (max-width: 991px) {
+        .card .card-details .btn-card {
+          padding: 5px 20px;
+          font-size: 14px;
+          line-height: 18px; } }
 
 /* card-1 */
 .card.card-1 {
@@ -7332,77 +7348,71 @@ body {
   flex-direction: row;
   align-items: flex-start;
   padding: 15px; }
+  @media (max-width: 767px) {
+    .card-horizontal {
+      flex-direction: column; } }
   .card-horizontal .card-image {
     min-width: 50%; }
   .card-horizontal .card-details {
     flex-grow: 1;
-    min-width: 50%; }
+    min-width: 50%;
+    padding: 0;
+    padding-left: 20px; }
+    @media (max-width: 767px) {
+      .card-horizontal .card-details {
+        padding-left: 0;
+        margin-top: 10px; } }
+    .card-horizontal .card-details h4 {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%; }
+      @media (max-width: 767px) {
+        .card-horizontal .card-details h4 {
+          white-space: normal;
+          overflow: inherit; } }
 
 /*card-h-1*/
-.card.card-h-1 .card-details {
-  padding: 0;
-  padding-left: 20px; }
-  .card.card-h-1 .card-details h4 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%; }
-
 /*card-h-2*/
-.card.card-h-2 .card-details {
-  padding: 0;
-  padding-left: 20px; }
-  .card.card-h-2 .card-details h4 {
-    white-space: nowrap;
+.card.card-h-2 .card-details .user-detail {
+  margin-top: 15px;
+  display: flex;
+  align-items: center; }
+  .card.card-h-2 .card-details .user-detail .avatar {
+    width: 36px;
+    height: 36px;
     overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%; }
-  .card.card-h-2 .card-details .user-detail {
-    margin-top: 15px;
-    display: flex;
-    align-items: center; }
-    .card.card-h-2 .card-details .user-detail .avatar {
-      width: 36px;
-      height: 36px;
-      overflow: hidden;
-      border-radius: 50%;
-      margin-right: 5px; }
-    .card.card-h-2 .card-details .user-detail span {
-      font-size: 14px;
-      font-weight: 700;
-      display: inline-block;
-      color: #333; }
-
-/*card-h-3*/
-.card.card-h-3 .card-details {
-  padding: 0;
-  padding-left: 20px; }
-  .card.card-h-3 .card-details h4 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%; }
-  .card.card-h-3 .card-details .date {
-    border-radius: 4px;
+    border-radius: 50%;
+    margin-right: 5px; }
+  .card.card-h-2 .card-details .user-detail span {
     font-size: 14px;
     font-weight: 700;
-    color: #333;
     display: inline-block;
-    margin-bottom: 5px; }
-    .card.card-h-3 .card-details .date .fa {
-      margin-right: 5px; }
-  .card.card-h-3 .card-details .user-detail {
-    margin-top: 15px;
-    display: flex;
-    align-items: center; }
-    .card.card-h-3 .card-details .user-detail .avatar {
-      width: 36px;
-      height: 36px;
-      overflow: hidden;
-      border-radius: 50%;
-      margin-right: 5px; }
-    .card.card-h-3 .card-details .user-detail span {
-      font-size: 14px;
-      font-weight: 700;
-      display: inline-block;
-      color: #333; }
+    color: #333; }
+
+/*card-h-3*/
+.card.card-h-3 .card-details .date {
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  display: inline-block;
+  margin-bottom: 5px; }
+  .card.card-h-3 .card-details .date .fa {
+    margin-right: 5px; }
+
+.card.card-h-3 .card-details .user-detail {
+  margin-top: 15px;
+  display: flex;
+  align-items: center; }
+  .card.card-h-3 .card-details .user-detail .avatar {
+    width: 36px;
+    height: 36px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 5px; }
+  .card.card-h-3 .card-details .user-detail span {
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-block;
+    color: #333; }
