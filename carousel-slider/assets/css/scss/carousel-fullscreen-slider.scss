@@ -1,0 +1,48 @@
+@mixin carousel-height($min-height, $height) {
+    min-height: $min-height;
+    height: $height;
+}
+
+// Carousel full screen slider responsive css
+@mixin ipad-max1024 {
+    @media (max-width:1024px) { @content; }
+}
+@mixin mobile-max667 {
+    @media (max-width:667px) { @content; }
+}
+
+// Carousel full screen slider desktop css
+.carousel {
+    @include carousel-height(100vh, 100vh);
+    @include ipad-max1024 {
+        @include carousel-height(500px, 500px);
+    }
+    @include mobile-max667 {
+        @include carousel-height(300px, 300px);
+    }
+    .carousel-inner{
+        @include carousel-height(100vh, 100vh);
+        @include ipad-max1024 {
+            @include carousel-height(500px, 500px);
+        }
+        @include mobile-max667 {
+            @include carousel-height(300px, 300px);
+        }
+        .carousel-caption{
+            bottom: 30px;
+        }
+        .carousel-item img {
+            object-fit:cover;
+            @include carousel-height(100vh, 100vh);
+            @include ipad-max1024 {
+                @include carousel-height(500px, 500px);
+            }
+            @include mobile-max667 {
+                @include carousel-height(300px, 300px);
+            }
+        }
+    }
+    .carousel-indicators{
+        margin-bottom: 1rem;
+    }
+}
