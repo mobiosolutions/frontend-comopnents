@@ -1,0 +1,24 @@
+.progress-bar-vertical {
+  width: 20px;
+  min-height: 100px;
+  display: flex;
+  align-items: flex-end;
+  float: left;
+}
+.progress-bar-vertical .progress-bar {
+  width: 100%;
+  height: 0;
+  -webkit-transition: height 0.6s ease;
+  -o-transition: height 0.6s ease;
+  transition: height 0.6s ease;
+}
+
+.progress-bar-vertical.multiple-bar {
+  vertical-align: bottom;
+  flex-direction: column-reverse;
+}
+.progress-bar-vertical.multiple-bar .progress-bar {
+  display: block;
+}
+
+/*# sourceMappingURL=vertical-progress-bars.css.map */
