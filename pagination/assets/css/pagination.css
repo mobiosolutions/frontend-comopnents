@@ -66,4 +66,48 @@
   }
 }
 
+.arrow-pagination {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin-top: 10px;
+}
+.arrow-pagination li {
+  display: inline;
+  text-align: center;
+}
+.arrow-pagination li:first-child a {
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.arrow-pagination li:last-child a {
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.arrow-pagination a {
+  float: left;
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 5px 12px;
+  color: #017ac7;
+  line-height: 1.5;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+.arrow-pagination a:hover {
+  color: #017ac7;
+  border: 1px solid #017ac7;
+  background-color: transparent;
+}
+.arrow-pagination a.active, .arrow-pagination a:active {
+  background: #017ac7;
+  border: 1px solid #017ac7;
+  color: #fff;
+  cursor: default;
+  outline: none;
+}
+
 /*# sourceMappingURL=pagination.css.map */
