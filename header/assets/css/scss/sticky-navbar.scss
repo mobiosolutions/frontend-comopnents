@@ -1,0 +1,124 @@
+$close-icon-bg: #a4aab7;
+$transition-time: 0.5s;
+$rotation: 45deg;
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    -o-transform: $property;
+    transform: $property;
+}
+@mixin transform-origin($transform-origin-property){
+    -webkit-transform-origin: $transform-origin-property;
+    -moz-transform-origin: $transform-origin-property;
+    -o-transform-origin: $transform-origin-property;
+    transform-origin: $transform-origin-property;
+}
+@mixin ipad-max991{
+	@media only screen and (max-width:991px) { @content; }
+}
+
+// Sticky Header css
+header {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    line-height: normal;
+    height: 78px;
+    background: #007bff;
+    -webkit-transition: all $transition-time ease;
+    transition: all $transition-time ease;
+    .navbar{
+        padding: 20px 0px;
+        a{
+            color: #fff;
+            text-align: left;
+        }
+    } 
+    &.sticky {
+        line-height: normal;
+        height: 55px;
+        text-align: left;
+        .navbar{
+            padding: 9px 0px;
+        }
+        @include ipad-max991{
+            .navbar-collapse{
+                padding-top: 5px;
+                margin-top: 8px;
+            }    
+        }
+    }   
+}
+
+// Animated hambergar css   
+.navbar-toggler {
+    width: auto;
+    height: 25px;
+    position: relative;
+    @include transform(rotate(0));
+    -webkit-transition: $transition-time ease-in-out;
+    -moz-transition: $transition-time ease-in-out;
+    -o-transition: $transition-time ease-in-out;
+    transition: $transition-time ease-in-out;
+    cursor: pointer;
+
+    span {
+        cursor: pointer;
+        border-radius: 1px;
+        height: 3px;
+        width: 25px;
+        background: $close-icon-bg;
+        position: absolute;
+        left: 0px;
+        display: inline-block;
+      
+        &:nth-child(1) {
+            top: 0;
+            @include transform-origin(left center);
+        }
+        &:nth-child(2) {
+            top: 10px;
+            @include transform-origin(left center);
+        }
+        &:nth-child(3) {
+            top: 20px;
+            @include transform-origin(left center);
+        }
+    }
+    &[aria-expanded="true"] {
+        span{
+            &:nth-child(1){
+                @include transform(rotate(45deg));
+                top: 0;
+                left: 5px
+            }
+            &:nth-child(2){
+                width: 0%;
+                opacity: 0
+            }
+            &:nth-child(3){
+                @include transform(rotate(-45deg));
+                top: 18px;
+                left: 5px
+            }
+        }
+    }
+    &:focus {
+        outline: none;
+    }
+  }
+  .top-nav-collapse {
+    box-shadow: none
+}
+.navbar-collapse {
+    @include ipad-max991{
+        padding-top: 10px;
+        margin-top: 15px;
+        border-top: 1px solid #71b6ff;
+    }
+}
+.navbar-dark{
+    .navbar-toggler{
+        border-color: transparent;
+    }
+}

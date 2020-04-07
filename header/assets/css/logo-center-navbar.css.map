@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACC,yCAAyC;EAI1C,iBACA;IAEQ,QAAQ,EAAE,QAAQ;IAClB,KAAK,EAAE,IAAI;IACX,IAAI,EAAE,CAAC;IACP,UAAU,EAAE,MAAM;IAClB,OAAO,EAAE,CAAC;;;;AAGlB,WAAW;EACP,OAAO,EAAE,CAAC",
+"sources": ["scss/logo-center-navbar.scss"],
+"names": [],
+"file": "logo-center-navbar.css"
+}
