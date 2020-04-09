@@ -5,11 +5,13 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="stylesheet" href="../assets/css/bootstrap.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/ecommerce-navbar.css"/>
 </head>
 <body>
 	<header class="container-fluid">
 		<div class="row">
-			<nav class="navbar navbar-expand-lg bg-dark navbar-dark py-lg-1 py-0 order-2 order-lg-1 w-100">
+			<nav class="navbar navbar-expand-lg bg-dark navbar-dark py-0 py-lg-0 order-2 order-lg-1 w-100">
 				<div class="container">
 					<div class="collapse navbar-collapse" id="navbar2">
 						<ul class="navbar-nav">
@@ -34,24 +36,233 @@
 								<a class="nav-link" href="#">My Account </a>
 							</li>
 							<li class="nav-item dropdown">
-								<button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
-									Currency: USD
-								</button>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#">CN</a>
-									<a class="dropdown-item" href="#">JP</a>
-									<a class="dropdown-item" href="#">KR</a>
+								<a class="nav-link dropdown-toggle mr-3 mr-lg-0" id="CurrencyNavbarDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rupess<span class="caret"></span>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="CurrencyNavbarDropdownMenu">
+										<a class="dropdown-item" href="#">USD</a>
+										<a class="dropdown-item" href="#">EUR</a>
+										<a class="dropdown-item" href="#">GBP</a>
+										<a class="dropdown-item" href="#">JPY</a>
 								</div>
 							</li>
 							<li class="nav-item dropdown">
-								<button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
-										Language: EN
-								</button>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#">CN</a>
-									<a class="dropdown-item" href="#">JP</a>
-									<a class="dropdown-item" href="#">KR</a>
+								<a class="nav-link dropdown-toggle mr-3 mr-lg-0" id="LanguageNavbarDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="LanguageNavbarDropdownMenu">
+									<a class="dropdown-item" href="#">Italian</a>
+									<a class="dropdown-item" href="#">Japanese</a>
+									<a class="dropdown-item" href="#">Spanish</a>
 								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="row py-lg-4">
+				<div class="col-lg-3 col-sm-3 col-3 order-1">
+					<a class="navbar-brand" href="#">
+						<span class="text-uppercase font-weight-bold">Company Logo</span>
+					</a>
+				</div>
+				<div class="col-lg-6 col-12 order-lg-2 order-3">
+					<form class="form-inline my-2 my-lg-0 justify-content-center">
+						<input class="form-control mr-sm-2" type="text" placeholder="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					</form>
+				</div>
+				<div class="col-lg-3 col-9 order-lg-3 order-2">
+					<div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+						<div class="wishlist d-flex flex-row align-items-center justify-content-end">
+							<div class="wishlist_icon">
+								<i class="fa fa-heart-o" aria-hidden="true"></i>
+								<div class="wishlist_count">10</div>
+							</div>
+							<div class="wishlist_content">
+								<div class="wishlist_text"><a href="#">Wishlist</a></div>
+							</div>
+						</div>
+						<div class="cart">
+							<div class="cart_container d-flex flex-row align-items-center justify-content-end">
+								<div class="cart_icon"> 
+									<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+									<div class="cart_count"><span>3</span></div>
+								</div>
+								<div class="cart_content">
+									<div class="cart_text"><a href="#">Cart</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-primary megamenu w-100" role="navigation">
+				<div class="container">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#megamenu">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+			
+					<div id="megamenu" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">	
+							<!-- Mega Menu -->
+							<li class="dropdown megamenu-fw nav-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link">Department <b class="caret"></b></a>
+								<ul class="dropdown-menu fullwidth">
+									<li class="megamenu-content">
+										<div class="row">
+											<div class="col-sm-4">
+												<h3 class="title">Facebook Wall Script</h3>
+												<img src="" alt="Facebook"/>
+											</div><!-- end col-4 -->
+											<div class="col-sm-4">
+												<h3 class="title">HTML5 Tutorials</h3>
+												<ul class="media-list">
+													<li class="media"><a href="javascript:void(0)" class="pull-right"><img src="http://w3lessons.info/wp-content/uploads/2014/04/html5.png" alt="" width="70" class="img-thumbnail media-object"></a>
+														<div class="media-body">
+															<p>HTML5 Inline Edit with PHP, MYSQL & jQuery Ajax</p>
+														</div>
+													</li>
+													<li class="media"><a href="javascript:void(0)" class="pull-right"><img src="http://w3lessons.info/wp-content/uploads/2014/03/Advanced-HTML5-Tutorials-332x187.png" alt="" width="70" class="img-thumbnail media-object"></a>
+														<div class="media-body">
+															<p>Advanced HTML5 Tutorials - Working Offline, Geolocation, Client Side Data Storage</p>
+														</div>
+													</li>
+												</ul>
+											</div><!-- end col-4 -->
+											<div class="col-sm-4">
+												<h3 class="title">Add Google Map</h3>
+													<img src="https://maps.googleapis.com/maps/api/staticmap?center=chennai&zoom=12&size=160x105&maptype=roadmap&markers=color:red%7Cchennai&sensor=false&scale=2">
+											</div><!-- end col-4 -->
+										</div><!-- end row -->
+										<hr>
+										<div class="row">
+											<div class="col-sm-6">
+												<h3 class="title">About W3lessons.info</h3>
+												<p>W3lessons.info is a web2.0 programming blog maintained by Karthikeyan. Tutorials focused on Programming, Jquery, Ajax, CSS3, HTML5, PHP, Web Services etc</p>
+											</div><!-- end col-6 -->
+											<div class="col-sm-3">
+												<h3 class="title">Follow W3lessons.info</h3>
+												<p>  <iframe src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/w3lessons.info" scrolling="no" frameborder="0" style="border:none; width:300px; height:120px"></iframe></p>
+											</div><!-- end col-3 -->
+											<div class="col-sm-3">
+												<h3 class="title">Subscribe</h3>
+												<p>        <form  class="fbf-widget" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onSubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=nextweb2', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+				<input class="subscription_email" type="text" name="email" placeholder="Enter email" /><input type="hidden" value="nextweb2" name="uri"/>
+				<input type="hidden" name="loc" value="en_US"/>
+				<input class="subscription_btn" type="submit" value ="Go"/>
+				</form></p>
+									
+									<p><img src="http://feeds.feedburner.com/~fc/nextweb2?bg=FF9900&amp;fg=000&amp;anim=1&amp;label=readers" height="26" width="88" style="border:0" alt="" /></p>     </div>               
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown megamenu-fw nav-item nav-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link">Mega Menu<b class="caret"></b></a>
+								<ul class="dropdown-menu fullwidth">
+									<li class="megamenu-content withdesc">
+										<div class="row">
+											<div class="col-sm-3">
+												<h3 class="title">Windows Products</h3>
+												<ul>
+													<li><a data-description="" href="javascript:void(0)">List Products 1</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 2</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 3</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 4</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 5</a></li>
+												</ul>
+											</div>
+											<div class="col-sm-3">
+												<h3 class="title">Linux Products</h3>
+												<ul>
+													<li><a data-description="" href="javascript:void(0)">List Products 1</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 2</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 3</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 4</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 5</a></li>
+												</ul>
+											</div>
+											<div class="col-sm-3">
+												<h3 class="title">Apple</h3>
+												<ul>
+													<li><a data-description="" href="javascript:void(0)">List Products 1</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 2</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 3</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 4</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 5</a></li>
+												</ul>
+											</div>
+											<div class="col-sm-3">
+												<h3 class="title">Paypal</h3>
+												<ul>
+													<li><a data-description="" href="javascript:void(0)">List Products 1</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 2</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 3</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 4</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 5</a></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown megamenu-fw nav-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link">Half Menu<b class="caret"></b></a>
+								<ul class="dropdown-menu half">
+									<li class="megamenu-content withoutdesc">
+										<div class="row">
+											<div class="col-sm-6">
+												<h3 class="title">Windows Products</h3>
+												<ul>
+													<li><a data-description="" href="javascript:void(0)">List Products 1</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 2</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 3</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 4</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 5</a></li>
+												</ul>
+											</div>
+											<div class="col-sm-6">
+												<h3 class="title">Linux Products</h3>
+												<ul>
+													<li><a data-description="" href="javascript:void(0)">List Products 1</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 2</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 3</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 4</a></li>
+													<li><a data-description="" href="javascript:void(0)">List Products 5</a></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown nav-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link">Multi level <b class="caret"></b></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a data-description="" href="javascript:void(0)">List Products 1</a></li>
+									<li><a data-description="" href="javascript:void(0)">List Products 2</a></li>
+									<li><a data-description="" href="javascript:void(0)">List Products 3</a></li>
+									<li><a data-description="" href="javascript:void(0)">List Products 4</a></li>
+									<li><a data-description="" href="javascript:void(0)">List Products 5</a></li>
+									<li class="dropdown-submenu">
+										<a href="#">List Products 6</a>
+										<ul class="dropdown-menu">
+											<li><a href="javascript:void(0)">List Products 6.1</a></li>
+											<li><a href="javascript:void(0)">List Products 6.2</a></li>
+											<li><a href="javascript:void(0)">List Products 6.3</a>
+												<ul class="dropdown-menu">
+														<li><a href="javascript:void(0)">List Products 6.1</a></li>
+														<li><a href="javascript:void(0)">List Products 6.2</a></li>
+														<li><a href="javascript:void(0)">List Products 6.3</a></li>
+													</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						
+						<ul class="nav navbar-nav navbar-right ml-auto">
+							<li class="nav-item">
+								<a class="nav-link"><i class="fa fa-phone"></i> 123-456-7890</a>
 							</li>
 						</ul>
 					</div>
@@ -69,6 +280,8 @@
 
     <script src="../assets/js/jquery-3.4.1.slim.min.js"></script>
     <script src="../assets/js/popper.min.js"></script>
-    <script src="../assets/js/bootstrap.min.js"></script>
+	<script src="../assets/js/bootstrap.min.js"></script>
+	
+	<script src="assets/js/ecommerce-navbar.js"></script>
 </body>
 </html>
